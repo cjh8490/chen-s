@@ -1,0 +1,23 @@
+<import src='/pages/templates/stars-templates/stars-templates.wxml' />
+
+<scroll-view
+  scroll-y='true'
+  bindscrolltolower='loadMore'
+>
+  <view class='more'>
+    <view 
+      class='more-item'
+      wx:for='{{allMore}}'
+      wx:key="{{index}}"
+      bindtap="toDetails"
+      data-id='{{item.id}}'
+    >
+        <image class='item-img' src='{{item.images.large}}'></image>
+        <view class='item-title overflow-name'>{{item.title}}</view>
+        <view class='item-rating'>
+            <template is='stars' data="{{item}}"/>
+            <text>{{item.rating.average}}</text>
+        </view>
+    </view>
+  </view>
+</scroll-view>

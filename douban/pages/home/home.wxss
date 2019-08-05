@@ -1,0 +1,53 @@
+@import '/pages/templates/stars-templates/stars-templates.wxss';
+.header-search{
+  background:  #42bd56;
+  padding: 20rpx 30rpx;
+}
+.search-main{
+  padding: 6rpx;
+  background: #fff;
+  border-radius: 10rpx;
+  text-align: center;
+  color: #ccc;
+  font-size: 32rpx; 
+}
+.list-header{
+ display: flex;
+ justify-content: space-between;
+ padding: 20rpx 30rpx;
+ font-size: 28rpx;
+}
+.header-content{
+  color: #42bd56;
+}
+.header-content text{
+  font-size: 28rpx;
+  font-weight: bold;
+}
+.list-img{
+  display: flex;
+}
+.img-item{
+  width: 230rpx;
+  padding: 20rpx;
+}
+.item-logo{
+  width: 230rpx;
+  height: 330rpx;
+  border-radius: 10rpx;
+}
+.item-name{
+  text-align: center;
+  font-size:28rpx;
+}
+.img-stars{
+  display: flex;
+  justify-content: space-between
+}
+.average{
+  font-size:32rpx;
+  color:#999;
+  font-weight: bold;
+  text-align: center;
+  line-height: 30rpx;
+}

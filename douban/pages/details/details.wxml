@@ -1,0 +1,74 @@
+<import src="/pages/templates/stars-templates/stars-templates.wxml"/>
+
+<view class='details-header'>
+  <view class='header-img'>
+      <image src='{{large}}'></image>
+  </view> 
+  <view class='header-content'>
+      <view class='content-name overflow-name'>{{title}}</view>
+      <view class='content-list'>
+         <view 
+          wx:for="{{genres}}"
+          wx:key="{{index}}"
+         >
+            {{item}}
+         </view> 
+        
+         <view> / </view>
+
+         <view
+          wx:for="{{countries}}"
+          wx:key="{{index}}"
+         >
+          {{item}} 
+         </view>
+         
+         <view> / </view>
+         
+         <view>
+          {{year}}年上映
+         </view>
+      </view>
+  </view> 
+</view>
+
+<view class='rating'>
+  <view class='rating-title'>评分</view>
+  <view>
+      <view class='rating-average'>
+          {{rating.average}}
+      </view>
+      <view class='rating-stars'>
+         <template is='stars' data="{{item}}"/>
+      </view>
+  </view> 
+</view>
+
+
+<view class='main'>
+  <view class='main-title'>简介</view>
+  <view class='main-content'>
+      {{summary}}
+  </view> 
+</view>
+
+
+<view class='per'>
+  <view class='per-title'>影人</view>
+  <scroll-view
+    scroll-x='true'
+  >
+    <view class='per-content'>
+        <!--这是一个循环的-->
+        <view 
+          class='per-list'
+          wx:for="{{casts}}"
+          wx:key="{{index}}"
+        >
+          <image src='{{item.avatars.large}}'></image>
+          <view class='overflow-name'>{{item.name}}</view>
+        </view>
+        <!--这是一个循环的end-->
+    </view> 
+  </scroll-view>
+</view>

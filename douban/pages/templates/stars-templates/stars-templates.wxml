@@ -1,0 +1,27 @@
+<template name='stars'>
+
+  <view 
+   class='stars'
+   wx:for='{{[1,2,3,4,5]}}'
+   wx:key="{{index}}"
+   wx:for-item='i'
+  > 
+    
+     <image 
+      src='/img/star_fill_whole.png'
+      wx:if="{{item.rating.stars/10 >= index+1 }}"
+     ></image>
+
+     <image 
+      src='/img/star_fill_half.png'
+      wx:elif="{{item.rating.stars/10 >= index && item.rating.stars%10 !=0 }}"
+     ></image>
+
+     <image 
+      src='/img/star_fill_none.png'
+      wx:else
+     ></image>
+
+  </view>
+
+</template>

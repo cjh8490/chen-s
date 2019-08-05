@@ -1,0 +1,75 @@
+@import '/pages/templates/stars-templates/stars-templates.wxss'
+;
+.details-header{
+  display: flex;
+  justify-content: space-between;
+  padding:20rpx;
+}
+.header-img image{
+  width:230rpx;
+  height: 330rpx;
+  border-radius: 10rpx;
+}
+.header-content{
+  padding-left:10rpx;
+}
+.content-name{
+  font-size:50rpx;
+  font-weight: bold;
+}
+.content-list{
+  display: flex;
+  flex-wrap: wrap;
+  font-size:28rpx;
+  color:#ccc;
+}
+
+.rating{
+  padding:20rpx;
+}
+.rating-title{
+  font-size:42rpx;
+}
+.rating-average{
+  font-size:36rpx;
+  font-weight: bold;
+  text-align: center;
+}
+.rating-stars{
+  margin-top:20rpx;
+  display: flex;
+  justify-content: center;
+}
+
+.main{
+  padding:20rpx;
+}
+.main-title{
+  font-size:42rpx;
+  margin-bottom:20rpx;
+}
+.main-content{
+  font-size:28rpx;
+}
+
+.per-title{
+  padding:20rpx;
+  font-size:42rpx;
+  margin-bottom:20rpx;
+}
+.per-content{
+  display: flex;
+}
+.per-list{
+  width:200rpx;
+  padding:20rpx;
+}
+.per-list image{
+  border-radius: 10rpx;
+  width:200rpx;
+  height: 300rpx;
+}
+.per-list view{
+  font-size:32rpx;
+  text-align: center;
+}

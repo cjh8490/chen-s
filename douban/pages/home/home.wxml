@@ -1,0 +1,45 @@
+<import src="/pages/templates/stars-templates/stars-templates.wxml"/>
+<view class="header-search">
+<view class="search-main" bindlongtap="toSearch">
+<text class='iconfont icon-fangdajing'></text>搜索
+</view>
+</view>
+
+
+<view class="container">
+<view class="list" wx:for="{{list}}" wx:key="{{index}}">
+<view class="list-header">
+<view class="header-title">{{item.title}}</view>
+
+<view class="header-content" bindtap="toMore" data-title="{{item.title}}">查看更多<text class='iconfont icon-iconfontjiantou4'></text>
+</view>
+</view>
+
+
+<scroll-view scroll-x="true">
+<view class="list-img">
+<view class="img-item" wx:for="{{item.move.subjects}}" wx:for-key="item" wx:key="{{index}}" bindtap='toDetails' data-id="{{item.id}}">
+
+<image class='item-logo' src='{{item.images.large}}'></image>
+<view class='item-name overflow-name'>{{item.title}}</view>
+<view class="img-stars">
+<template is="stars" data="{{item}}"/>
+<text class='average'>{{item.rating.average}}</text>
+
+
+</view>
+
+
+</view>
+
+</view>
+
+
+</scroll-view>
+
+</view>
+
+
+
+
+</view>
